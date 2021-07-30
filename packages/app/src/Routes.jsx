@@ -1,10 +1,14 @@
 import { Router } from '@reach/router'
-import HomePage from './containers/HoePage'
+import DemoPage from 'containers/DemoPage'
+import DetailPage from 'containers/DetailPage'
+import HomePage from './containers/HomePage'
 
 function Routes() {
     return (
         <Router>
             <HomePage path='/' />
+            <DetailPage path='/detail' />
+            <DemoPage path='/demo' />
         </Router>
     )
 }

@@ -5,12 +5,17 @@
   "main": "index.js",
   "author": "puei <dyj2017_fqd@163.com>",
   "license": "MIT",
-  "workspaces":["packages/*"],
+  "workspaces": [
+    "packages/*"
+  ],
   "scripts": {
+    "preinstall": "husky install",
+    "new-version":"lerna version --conventional-commits",
     "start:app": "yarn workspace app run start",
     "dev:backend": "yarn workspace backend run develop"
   },
   "devDependencies": {
+    "husky": "^7.0.1",
     "lerna": "^4.0.0"
   }
 }

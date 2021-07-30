@@ -12,10 +12,16 @@
     "preinstall": "husky install",
     "new-version":"lerna version --conventional-commits",
     "start:app": "yarn workspace app run start",
+    "build:app": "yarn workspace app run build",
     "dev:backend": "yarn workspace backend run develop"
   },
   "devDependencies": {
+    "concurrently": "^6.2.0",
     "husky": "^7.0.1",
-    "lerna": "^4.0.0"
+    "lerna": "^4.0.0",
+    "lint-staged": "^11.1.1"
+  },
+  "lint-staged": {
+    "*.{js,jsx}": "eslint --fix"
   }
 }
